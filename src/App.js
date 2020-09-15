@@ -1,19 +1,17 @@
-import React from "react";
-
+import React, { Component } from "react";
 import "./App.css";
-import Saludar from "./components/Saludar";
+import Cabecera from "./components/Cabecera";
 
-function App() {
-  const enviarSaludo = (nombre) => {
-    console.log("Hola " + nombre);
-  };
-  return (
-    <div className="App">
-      <h1>Mi primer componente</h1>
-      <Saludar nombre="Diana" apellidos="Becerra" enviarSaludo={enviarSaludo} />
-      <Saludar nombre="Vicente" apellidos="Cruz" />
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
+        <Cabecera />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+      </div>
+    );
+  }
 }
-
 export default App;

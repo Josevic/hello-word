@@ -1,21 +1,21 @@
-import React from 'react';
-import logo from '../logo.svg';
+import React, { Component } from "react";
+import logo from "../logo.svg";
 
-export default class Cabecera {
-  manejaClick = () => {
-    console.log('He sido clicleado');
+export default class Cabecera extends Component {
+  render() {
+    return (
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    );
   }
-    render() {
-      const { miau} = this.props
-      
-        return (
-    <header className="App-header">
-          <img onClick={this.manejaClick} src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">
-            {miau}
-            
-          </h1>               
-        </header>
-        );
-    }
 }
