@@ -3,10 +3,16 @@ import logo from "../logo.svg";
 
 export default class Cabecera extends Component {
   render() {
-    const { saludo } = this.props;
+    const { saludar, click } = this.props;
     return (
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img
+          onClick={click}
+          src={logo}
+          className="App-logo"
+          alt="logo"
+          style={{ pointerEvents: "all" }}
+        />
 
         <a
           className="App-link"
@@ -14,7 +20,7 @@ export default class Cabecera extends Component {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {saludo}
+          {saludar}
         </a>
       </header>
     );
